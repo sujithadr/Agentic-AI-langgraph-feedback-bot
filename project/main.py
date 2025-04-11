@@ -1,15 +1,19 @@
 from project.graph_builder import graph
 import json
+from datetime import datetime
 
 if __name__ == "__main__":
-    # Example payload simulating a customer remark
+    # Prompt user for input
+    user_input = input("💬 Enter a customer remark: ").strip()
+
+    # Compose input payload using current timestamp
     input_payload = {
         "payload": [
             {
-                "time_of_comment": "2025-04-10",
-                "customer_remark": "Why is the price so high?",
-                "social_media_channel": "twitter",
-                "number_of_likes": 56
+                "time_of_comment": datetime.now().isoformat(),
+                "customer_remark": user_input,
+                "social_media_channel": "manual",
+                "number_of_likes": 0
             }
         ]
     }
