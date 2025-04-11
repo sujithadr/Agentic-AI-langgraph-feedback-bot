@@ -1,4 +1,4 @@
-from langgraph.graph import StateGraph, START
+from langgraph.graph import StateGraph, START 
 from project.state import State
 from project.handlers import (
     extract_content,
@@ -6,7 +6,8 @@ from project.handlers import (
     run_question_code,
     tag_query,
     beautify
-)
+) # Import necessary modules
+
 from dotenv import load_dotenv
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
@@ -29,9 +30,9 @@ prompt = ChatPromptTemplate.from_messages([
 ])
 
 # Build LLM pipeline
-chain = prompt | llm | StrOutputParser()
+chain = prompt | llm | StrOutputParser() # Define the pipeline for routing
 
-def route_question_or_compliment(state: State):
+def route_question_or_compliment(state: State): # Function to classify the customer remark
     """
     Uses an LLM to classify the customer remark.
     Expected output: 'question' or 'compliment'
@@ -68,3 +69,5 @@ graph_builder.add_conditional_edges(
 
 # Compile the LangGraph
 graph = graph_builder.compile()
+
+
