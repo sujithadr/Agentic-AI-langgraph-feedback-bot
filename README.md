@@ -3,7 +3,7 @@
 A LangGraph project that classifies customer remarks as questions or compliments using OpenAI GPT, tags them by context, and returns beautified responses.
 
 **Author:** Sujith Somanunnithan  
-**GitHub:** [github.com/sujithsom/langgraph-feedback-bot](https://github.com/sujithsom/langgraph-feedback-bot)
+**GitHub:** [github.com/sujithsom/langgraph-feedback-bot](https://github.com/sujithadr/Agentic-AI-langgraph-feedback-bot)
 
 ---
 
